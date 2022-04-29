@@ -13,7 +13,6 @@
 
 <body
     class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-pink mdui-theme-layout-auto mdui-loaded">
-
     <header class="appbar mdui-appbar mdui-appbar-fixed">
         <div class="mdui-toolbar mdui-color-theme">
             <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white"
@@ -21,17 +20,19 @@
                 <i class="mdui-icon material-icons">&#xe5d2;</i>
             </span>
             <a href="/" class="mdui-typo-headline mdui-hidden-xs">Super12138工具箱</a>
-            <a href="/404" class="mdui-typo-title">404</a>
+            <a href="/" class="mdui-typo-title">全部工具</a>
             <div class="mdui-toolbar-spacer"></div>
         </div>
     </header>
     <div class="mdui-drawer" id="main-drawer">
-        <div class="mdui-list" mdui-collapse="{accordion: true}" style="margin-bottom: 76px">
+        <div class="mdui-list" mdui-collapse="{accordion: true}" style="margin-bottom: 76px;">
             <div class="mdui-collapse-item">
-                <div class="mdui-list-item mdui-list-item mdui-ripple">
+                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
                     <i class="mdui-list-item-icon mdui-icon material-icons">&#xe88a;</i>
-                    <a href="/" class="mdui-list-item-content">首页</a>
+                    <a href="/" class="mdui-list-item-content">404</a>
                 </div>
+            </div>
+            <div class="mdui-collapse-item">
                 <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
                     <i class="mdui-list-item-icon mdui-icon material-icons">&#xe869;</i>
                     <div class="mdui-list-item-content">工具</div>
@@ -40,7 +41,9 @@
                 <div class="mdui-collapse-item-body mdui-list">
                     <a href="/tools/all" class="mdui-list-item mdui-ripple">全部工具</a>
                 </div>
-                <div class="mdui-list-item mdui-list-item mdui-ripple">
+            </div>
+            <div class="mdui-collapse-item">
+                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
                     <i class="mdui-list-item-icon mdui-icon material-icons">&#xe88e;</i>
                     <a href="/about" class="mdui-list-item-content">关于</a>
                 </div>
