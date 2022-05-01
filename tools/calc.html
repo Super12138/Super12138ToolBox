@@ -51,30 +51,88 @@
         </div>
     </div>
     <div class="mdui-container mdui-typo">
-        <div class="mdui-textfield">
-            <input class="mdui-textfield-input" type="text" id="result" onfocus="this.flur();">
+        <div class="mdui-row">
+            <div class="mdui-textfield">
+                <input class="mdui-textfield-input" type="text" id="result">
+            </div>
+            <div class="mdui-col-xs-9">
+                <button class="mdui-btn mdui-btn-block mdui-color-theme-accent mdui-btn-raised mdui-ripple"
+                    onclick="clearzero()">C</button>
+            </div>
+            <div class="mdui-col-xs-3">
+                <button class="mdui-btn mdui-btn-block mdui-btn-raised mdui-color-theme-accent mdui-ripple"
+                    onclick="del()">←</button>
+            </div>
+            <br><br>
+            <div class="mdui-col-xs-3">
+                <button class="mdui-btn mdui-btn-block mdui-color-indigo mdui-btn-raised mdui-ripple"
+                    onclick="op('+')">+</button>
+            </div>
+            <div class="mdui-col-xs-3">
+                <button class="mdui-btn mdui-btn-block mdui-color-indigo mdui-btn-raised mdui-ripple"
+                    onclick="op('-')">-</button>
+            </div>
+            <div class="mdui-col-xs-3">
+                <button class="mdui-btn mdui-btn-block mdui-color-indigo mdui-btn-raised mdui-ripple"
+                    onclick="op('*')">×</button>
+            </div>
+            <div class="mdui-col-xs-3">
+                <button class="mdui-btn mdui-btn-block mdui-color-indigo mdui-btn-raised mdui-ripple"
+                    onclick="op('/')">÷</button>
+            </div>
+            <br><br>
+            <div class="mdui-col-xs-4">
+                <button class="mdui-btn mdui-btn-block  mdui-btn-raised mdui-ripple" onclick="command(7)">7</button>
+            </div>
+            <div class="mdui-col-xs-4">
+                <button class="mdui-btn mdui-btn-block mdui-btn-raised mdui-ripple" onclick="command(8)">8</button>
+            </div>
+            <div class="mdui-col-xs-4">
+                <button class="mdui-btn mdui-btn-block mdui-btn-raised mdui-ripple" onclick="command(9)">9</button>
+            </div>
+            <br><br>
+            <div class="mdui-col-xs-4">
+                <button class="mdui-btn mdui-btn-block mdui-btn-raised mdui-ripple" onclick="command(4)">4</button>
+            </div>
+            <div class="mdui-col-xs-4">
+                <button class="mdui-btn mdui-btn-block mdui-btn-raised mdui-ripple" onclick="command(5)">5</button>
+            </div>
+            <div class="mdui-col-xs-4">
+                <button class="mdui-btn mdui-btn-block mdui-btn-raised mdui-ripple" onclick="command(6)">6</button>
+            </div>
+            <br><br>
+            <div class="mdui-col-xs-4">
+                <button class="mdui-btn mdui-btn-block mdui-btn-raised mdui-ripple" onclick="command(1)">1</button>
+            </div>
+            <div class="mdui-col-xs-4">
+                <button class="mdui-btn mdui-btn-block mdui-btn-raised mdui-ripple" onclick="command(2)">2</button>
+            </div>
+            <div class="mdui-col-xs-4">
+                <button class="mdui-btn mdui-btn-block mdui-btn-raised mdui-ripple" onclick="command(3)">3</button>
+            </div>
+            <br><br>
+            <div class="mdui-col-xs-3">
+                <button class="mdui-btn mdui-btn-block mdui-btn-raised mdui-ripple" onclick="command(0)">0</button>
+            </div>
+            <div class="mdui-col-xs-3">
+                <button class="mdui-btn mdui-btn-block mdui-btn-raised mdui-ripple" onclick="dzero()">00</button>
+            </div>
+            <div class="mdui-col-xs-3">
+                <button class="mdui-btn mdui-btn-block mdui-btn-raised mdui-ripple" onclick="dot()">.</button>
+            </div>
+            <div class="mdui-col-xs-3">
+                <button class="mdui-btn mdui-btn-block mdui-btn-raised mdui-ripple" onclick="getPercent('%')">%</button>
+            </div>
+            <br><br>
+            <div class="mdui-col-xs-12">
+                <button class="mdui-btn mdui-btn-block mdui-color-theme-accent mdui-btn-raised mdui-ripple"
+                    onclick="equal()">=</button>
+            </div>
+            <br>
+            <h3>使用说明：</h3>
+            <p>单击数字或符号就可以开始运算。也可以在文本框中输入数字和符号（+、-、*、\）最后按等于按钮进行运算。</p>
         </div>
-        <button class="mdui-btn mdui-btn-raised mdui-ripple" onclick="command(1)">1</button>
-        <button class="mdui-btn mdui-btn-raised mdui-ripple" onclick="command(2)">2</button>
-        <button class="mdui-btn mdui-btn-raised mdui-ripple" onclick="command(3)">3</button>
-        <button class="mdui-btn mdui-btn-raised mdui-ripple" onclick="command(4)">4</button>
-        <button class="mdui-btn mdui-btn-raised mdui-ripple" onclick="command(5)">5</button>
-        <button class="mdui-btn mdui-btn-raised mdui-ripple" onclick="command(6)">6</button>
-        <button class="mdui-btn mdui-btn-raised mdui-ripple" onclick="command(7)">7</button>
-        <button class="mdui-btn mdui-btn-raised mdui-ripple" onclick="command(8)">8</button>
-        <button class="mdui-btn mdui-btn-raised mdui-ripple" onclick="command(9)">9</button>
-        <button class="mdui-btn mdui-btn-raised mdui-ripple" onclick="command(0)">0</button>
-        <button class="mdui-btn mdui-btn-raised mdui-ripple" onclick="dzero()">00</button>
-        <button class="mdui-btn mdui-btn-raised mdui-ripple" onclick="op('+')">+</button>
-        <button class="mdui-btn mdui-btn-raised mdui-ripple" onclick="op('-')">-</button>
-        <button class="mdui-btn mdui-btn-raised mdui-ripple" onclick="op('*')">×</button>
-        <button class="mdui-btn mdui-btn-raised mdui-ripple" onclick="op('/')">÷</button>
-        <button class="mdui-btn mdui-btn-raised mdui-ripple" onclick="equal()">=</button>
-        <button class="mdui-btn mdui-btn-raised mdui-ripple" onclick="del()">←</button>
-        <button class="mdui-btn mdui-btn-raised mdui-ripple" onclick="clearzero()">C</button>
-        <button class="mdui-btn mdui-btn-raised mdui-ripple" onclick="dot()">.</button>
-        <button class="mdui-btn mdui-btn-raised mdui-ripple" onclick="getPercent('%')">%</button>
-        <h3>使用说明：</h3>
+    </div>
     </div>
     <script>
         var resultDom = document.getElementById("result");

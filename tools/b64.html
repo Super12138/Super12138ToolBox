@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="stylesheet" href="../css/mdui.min.css" />
+    <title>Super12138工具箱 - 一个好用的开源的工具箱</title>
+</head>
+
+<body
+    class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-pink mdui-theme-layout-auto mdui-loaded">
+    <header class="appbar mdui-appbar mdui-appbar-fixed">
+        <div class="mdui-toolbar mdui-color-theme">
+            <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white"
+                mdui-drawer="{target: '#main-drawer', swipe: true}">
+                <i class="mdui-icon material-icons">&#xe5d2;</i>
+            </span>
+            <a href="/" class="mdui-typo-headline mdui-hidden-xs">Super12138工具箱</a>
+            <a href="/" class="mdui-typo-title">Base64编码生成器</a>
+            <div class="mdui-toolbar-spacer"></div>
+        </div>
+    </header>
+    <div class="mdui-drawer" id="main-drawer">
+        <div class="mdui-list" mdui-collapse="{accordion: true}" style="margin-bottom: 76px;">
+            <div class="mdui-collapse-item">
+                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">&#xe88a;</i>
+                    <a href="/" class="mdui-list-item-content">首页</a>
+                </div>
+            </div>
+            <div class="mdui-collapse-item">
+                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">&#xe869;</i>
+                    <div class="mdui-list-item-content">工具</div>
+                    <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe313;</i>
+                </div>
+                <div class="mdui-collapse-item-body mdui-list">
+                    <a href="/tools/all" class="mdui-list-item mdui-ripple">全部工具</a>
+                </div>
+            </div>
+            <div class="mdui-collapse-item">
+                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">&#xe88e;</i>
+                    <a href="/about" class="mdui-list-item-content">关于</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mdui-container mdui-typo">
+        <p>请将文件拖入到本网页中，即可生成Base64编码。输出结果见下方。</p>
+        <div class="mdui-textfield">
+            <textarea class="mdui-textfield-input" id="output" placeholder="在此查看输出结果"></textarea>
+            <script>
+                window.addEventListener("dragenter", function (event) { event.preventDefault(); }, false);
+                window.addEventListener("dragover", function (event) { event.preventDefault(); }, false);
+                window.addEventListener("drop", function (event) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        //var output = document.getElementById = ('output');
+                        document.body.insertAdjacentHTML("afterBegin", '<p>' + e.target.result + '</p>');
+                        innerHTML = (e.target.result);
+                        //document.body.classList.remove('empty');
+                    };
+                    reader.readAsDataURL(event.dataTransfer.files[0]);
+                    event.preventDefault();
+                }, false);
+            </script>
+        </div>
+
+    </div>
+    <script src="../js/mdui.min.js"></script>
+</body>
+
+</html>
